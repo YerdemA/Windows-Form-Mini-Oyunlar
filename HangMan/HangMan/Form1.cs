@@ -148,7 +148,7 @@ namespace HangMan
             try
             {
                 // Yanlış tahmin sayısına göre görseli güncelle
-                string gorselYolu = Path.Combine("Resources", $"{yanlisTahmin}.png"); // 0'dan başlıyor
+                string gorselYolu = $"Resources/{(yanlisTahmin).png}"; // 0'dan başlıyor
                 gorsel.Image = Image.FromFile(gorselYolu);
             }
             catch (Exception ex)
