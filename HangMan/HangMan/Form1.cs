@@ -146,8 +146,8 @@ namespace HangMan
         private void GoruntuGuncelle(int yanlisTahmin)
         {
             try
-            {
-                // Yanlış tahmin sayısına göre görseli güncelle
+            { 
+                // Yanlış tahmin yapıldı, görsel güncelle.
                 string gorselYolu = $"Resimler/{yanlisTahmin}.png"; // 0'dan başlıyor
                 gorsel.Image = Image.FromFile(gorselYolu);
             }
