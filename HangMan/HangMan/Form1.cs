@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.IO;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -146,9 +147,11 @@ namespace HangMan
         private void GoruntuGuncelle(int yanlisTahmin)
         {
             try
-            { 
-                // Yanlış tahmin yapıldı, görsel güncelle.
-                string gorselYolu = $"Resimler/{yanlisTahmin}.png"; // 0'dan başlıyor
+            {
+                // Yanlış tahmin sayısına göre görseli güncelle
+                string gorselAdi = $"{yanlisTahmin}.png";
+                string gorselYolu = Path.Combine("Resources", gorselAdi);
+                
                 gorsel.Image = Image.FromFile(gorselYolu);
             }
             catch (Exception ex)
